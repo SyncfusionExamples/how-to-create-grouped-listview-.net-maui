@@ -10,7 +10,7 @@
     <ContentPage.Content>
         <ListView:SfListView x:Name="listView"
                              ItemSize="70" GroupHeaderSize="50"
-                             SelectionMode="{OnPlatform Default= Single , UWP=None}"
+                             SelectionMode="Single"
                              IsStickyGroupHeader="True"
                              ItemsSource="{Binding ContactsInfo}"
                              AllowGroupExpandCollapse="True"
