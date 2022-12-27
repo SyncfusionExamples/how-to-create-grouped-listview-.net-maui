@@ -46,12 +46,6 @@
 		<MauiAsset Include="Resources\Raw\**" LogicalName="%(RecursiveDir)%(Filename)%(Extension)" />
 	</ItemGroup>
 
-	<ItemGroup Condition="$(TargetFramework.Contains('-windows'))">
-		<!-- Required - WinUI does not yet have buildTransitive for everything -->
-		<PackageReference Include="Microsoft.WindowsAppSDK" Version="1.0.0" />
-		<PackageReference Include="Microsoft.Graphics.Win2D" Version="1.0.0.30" />
-	</ItemGroup>
-
 	<ItemGroup>
 	  <None Remove="Resources\Fonts\Roboto-Medium.ttf" />
 	  <None Remove="Resources\Fonts\Roboto-Regular.ttf" />
@@ -78,10 +72,7 @@
 	</ItemGroup>
 
 	<ItemGroup>
-	  <PackageReference Include="Syncfusion.Maui.Core" Version="19.4.1.95" />
-	  <PackageReference Include="Syncfusion.Maui.DataSource" Version="19.4.1.7" />
-	  <PackageReference Include="Syncfusion.Maui.GridCommon" Version="19.4.1.4" />
-	  <PackageReference Include="Syncfusion.Maui.ListView" Version="19.4.1.49" />
+	  <PackageReference Include="Syncfusion.Maui.ListView" Version="20.4.38" />
 	</ItemGroup>
 
 	<ItemGroup>
@@ -90,17 +81,6 @@
 	  </MauiXaml>
 	</ItemGroup>
 
-	<ItemGroup Condition="'$(TargetFramework)' == 'net6.0-ios'">
-	  <PackageReference Include="Syncfusion.Maui.ListView">
-	    <Version>19.4.1.47</Version>
-	  </PackageReference>
-	</ItemGroup>
-
-	<ItemGroup Condition="'$(TargetFramework)' == 'net6.0-maccatalyst'">
-	  <PackageReference Include="Syncfusion.Maui.ListView">
-	    <Version>19.4.1.47</Version>
-	  </PackageReference>
-	</ItemGroup>
 
 	<PropertyGroup Condition="$(TargetFramework.Contains('-windows'))">
 		<OutputType>WinExe</OutputType>
